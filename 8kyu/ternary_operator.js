@@ -19,10 +19,8 @@ In the end, click "Submit" to submit your code pass this kata.
 */
 
 
-
 function saleHotdogs(n){
   return n<5 ? n*95
     : n>=5 && n<10 ? n*100
-    : n>=10 ? n*90
-    : "nothing";
+    : n*90;
 }
