@@ -17,12 +17,12 @@ isolateIt(["1234","56789"]) should return ["12|34","56|89"]
 a little hint: Flexible use of ```slice()``` Will make the work more simple.
 
 */
+
+// second try
 function isolateIt(arr){
   let b = arr.map((s) => {
     if(s.length % 2 == 0) {
       [s.slice(0, s.length / 2), "|", s.slice(s.length / 2)].join('')
-    }else{
-      
     }
   })
   return b
