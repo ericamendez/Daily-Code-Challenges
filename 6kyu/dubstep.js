@@ -21,10 +21,9 @@ songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
 */
 
 function songDecoder(song){
-  // new string with no Wub lots of spaces
-  let str = song.split("WUB").join(" ")
-  // new array of the str string with spaces included
-  let arr = str.split(" ")
+  // new array with no Wub lots of spaces
+  let arr = song.split("WUB")
+
   // new array has none of the space elements
   let spaceArr = arr.filter(item => item.trim() !== '')
   // spaceArr being converted into a string with spaces where the commas were
