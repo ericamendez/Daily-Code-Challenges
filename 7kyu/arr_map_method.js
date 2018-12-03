@@ -18,6 +18,8 @@ a little hint: Flexible use of ```slice()``` Will make the work more simple.
 
 */
 
+// INCOMPLETE
+
 // second try
 function isolateIt(arr){
   let b = arr.map((s) => {
