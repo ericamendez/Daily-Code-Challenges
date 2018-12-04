@@ -12,7 +12,6 @@ DNAStrand ("ATTGC") # return "TAACG"
 DNAStrand ("GTAT") # return "CATA"
 */
 
-
 function DNAStrand(dna){
   let arr = []
   for(let i = 0; i < dna.length; i++){
