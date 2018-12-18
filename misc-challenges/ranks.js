@@ -5,6 +5,5 @@ function solutionThree (A){
             return item
         }
     })
-
     return filtered.length
 }
