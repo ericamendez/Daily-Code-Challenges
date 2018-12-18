@@ -1,4 +1,4 @@
-#Daily Coding Challenges
+# Daily Coding Challenges
 
 ## Codewars
 Daily Kata (code challenges) from codewars.com
