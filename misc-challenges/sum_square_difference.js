@@ -7,7 +7,7 @@ let difference = (n) => {
     let squares = arr.map(item => item ** 2)
     // sum of arrays
     let sumOfSquares = squares.reduce((a, b) => a + b)
-    let squareOfSums = arr.reduce((a,b) => a + b)
+    let squareOfSums = (arr.reduce((a,b) => a + b)) ** 2
     
     return sumOfSquares - squareOfSums
 }
