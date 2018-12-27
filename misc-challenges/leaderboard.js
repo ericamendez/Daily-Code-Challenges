@@ -39,3 +39,5 @@ board.add_score("someone", 70)
 board.add_score("else", 80)
 board.add_score("hey", 90)
 board.add_score("sup", 97)
+
+console.log(board)
