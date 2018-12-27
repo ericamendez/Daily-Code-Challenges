@@ -46,7 +46,7 @@ for(let i = 0; i < m.length; i++){
             let hor = m[i][j] * m[i][j + 1] * m[i][j + 2] * m[i][j + 3]
             if (hor > greatest) {
                 greatest = hor
-                location = `i: ${i} and j: ${j}`
+                location = `Starts at (i: ${i} and j: ${j}. horizontal)`
             }
         }
         // vertical
@@ -54,7 +54,7 @@ for(let i = 0; i < m.length; i++){
             let vert = m[i][j] * m[i + 1][j] * m[i + 2][j] * m[i + 3][j]
             if (vert > greatest) {
                 greatest = vert
-                location = `i: ${i} and j: ${j}`
+                location = `Starts at (i: ${i} and j: ${j}. vertical)`
             }
         }
         // diagonal down
@@ -63,7 +63,7 @@ for(let i = 0; i < m.length; i++){
             
             if (diagDown > greatest) {
                 greatest = diagDown
-                location = `i: ${i} and j: ${j}`
+                location = `Starts at (i: ${i} and j: ${j}. diagonal downward)`
             }
         }
         // diagonal up
@@ -72,7 +72,7 @@ for(let i = 0; i < m.length; i++){
             
             if(diagUp > greatest){
                 greatest = diagUp
-                location = `i: ${i} and j: ${j}`
+                location = `Starts at (i: ${i} and j: ${j}. diagonal upward) ${m[i][j]}, ${m[i + 1][j - 1]}, ${m[i + 2][j - 2]}, ${m[i + 3][j - 3]}`
             }
         }
     }
