@@ -15,3 +15,18 @@ A leap year occurs on any year evenly divisible by 4, but not on a century unles
 How many Sundays fell on the first of the month during the twentieth century(1 Jan 1901 to 31 Dec 2000) ?
 */
 
+
+for(let year = 1901; year < 2001; i++){
+    // starts on monday
+    let start = 0
+    let leap = 28
+    if(year % 4 === 0){
+        leap = 29
+    }
+    let monthDays = [31, leap, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    let count = 0
+    monthDays.forEach(month =>{
+        
+    })
+
+}
