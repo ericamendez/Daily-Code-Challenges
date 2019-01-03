@@ -1,5 +1,5 @@
 function countAnimals(sentence) {
-    let num = sentence.match(/\d/g);
+    let num = sentence.match(/\b\d{1,2}\b/g);
     if(num == null){
         return 0
     }else{
