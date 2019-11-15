@@ -10,3 +10,6 @@ Competitive programming challenges for both consumers and businesses, where deve
 
 ## MISC Challenges
 Miscellaneous challenges 
+
+## Rosalind
+Rosalind is a platform for learning bioinformatics and programming through problem solving
