@@ -29,12 +29,13 @@ const n = 5
 const k = 3
 
 /**
- * n = 1,  1 immature rabbit pair. takes one month to mature.
- * n = 2, (1 pair * 2 rabbits) + (1 mature_pair * 3 offspring) => 5 rabbits, 2 pairs
+ * n = 0, 0 mature, 1 immature. => 0 offspring takes one month to mature.
+ * n = 1, 1 mature, 0 immature. => 3 offspring
+ * n = 2, 1 mature, 3 immature. => 3 offspring
+ * n = 3, 4 mature, 3 immature. => 12 offspring
+ * n = 4, 7 mature, 12 immature. => 21 offspirng
+ * n = 5, 19 mature, 21 immature. => 57 offspring
  * 
- * 
- * 
- * n = 3, (2 pair * 2 rabbits) + (2 pair * 3 offspring) => 10 rabbits, 5 pairs
- * n = 4, (5 pair * 2 rabbits) + (5 pair * 3 offspring) => 25 rabbits, 12 pairs
- * n = 5, (12 pair * 2 rabbits) + (12 pair * 3 offspring) => 25 rabbits, 12 pairs
+ * mature + immature = next month mature #
  */
+
