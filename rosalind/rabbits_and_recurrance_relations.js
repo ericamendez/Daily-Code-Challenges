@@ -20,7 +20,6 @@ Sample Output
 19
 
 http: //rosalind.info/problems/fib/
-https: //chrispresso.coffee/2019/02/21/rosalind-rabbits-and-recurrence-relations/
 */
 
 // months
@@ -39,3 +38,16 @@ const k = 3
  * mature + immature = next month mature #
  */
 
+const rabbit = (n, k) => {
+    if(n === 0){
+        return 0
+    }
+    if(n === 1){ 
+        return 1
+    }
+    return rabbit(n-1, k) + k*rabbit(n-2, k)
+}
+
+rabbit(30,2)
+
+//357913941
