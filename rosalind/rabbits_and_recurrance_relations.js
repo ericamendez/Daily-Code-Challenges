@@ -29,6 +29,7 @@ const k = 3
 
 /**
  * n = 0, 0 mature, 1 immature. => 0 offspring takes one month to mature.
+ * 
  * n = 1, 1 mature, 0 immature. => 3 offspring
  * n = 2, 1 mature, 3 immature. => 3 offspring
  * n = 3, 4 mature, 3 immature. => 12 offspring
@@ -39,11 +40,8 @@ const k = 3
  */
 
 const rabbit = (n, k) => {
-    if(n === 0){
-        return 0
-    }
-    if(n === 1){ 
-        return 1
+    if(n < 2){ 
+        return n
     }
     return rabbit(n-1, k) + k*rabbit(n-2, k)
 }
