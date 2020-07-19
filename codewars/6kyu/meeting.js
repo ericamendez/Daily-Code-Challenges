@@ -21,16 +21,13 @@ function meeting(s) {
     let personArray = s.toUpperCase().split(";")
 
     let lastNameSort = personArray.sort((a, b) => {
-        let lastNameA = a.split(":")[1]
-        let lastNameB = b.split(":")[1]
+        let NameA = a.split(":")[1]
+        let NameB = b.split(":")[1]
 
-        let firstNameA = a.split(":")[0]
-        let firstNameB = b.split(":")[0]
-
-        if (lastNameA > lastNameB ) {
+        if (NameA[1] > NameB[1] ) {
             return 1
-         } else if (lastNameA === lastNameB) {
-            if (firstNameA > firstNameB) {
+         } else if (NameA[1] === NameB[1]) {
+            if (NameA[0] > NameB[0]) {
                 return 1
             } else {
                 return -1
