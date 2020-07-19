@@ -20,9 +20,34 @@
 function meeting(s) {
     let personArray = s.toUpperCase().split(";")
 
-    
+    let lastNameSort = personArray.sort((a, b) => {
+        let lastNameA = a.split(":")[1]
+        let lastNameB = b.split(":")[1]
 
-    console.log(s.toUpperCase().split(";"))
+        let firstNameA = a.split(":")[0]
+        let firstNameB = b.split(":")[0]
+
+        if (lastNameA > lastNameB ) {
+            return 1
+         } else if (lastNameA === lastNameB) {
+            if (firstNameA > firstNameB) {
+                return 1
+            } else {
+                return -1
+            }
+         } else {
+             return -1
+         }
+    })
+
+    let answer = ""
+
+    let stringFormatting = lastNameSort.forEach((el, i) => {
+        let person = el.split(":")
+        answer += `(${person[1]}, ${person[0]})`
+    })
+
+    return answer
 }
 
  let str = "Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill"
