@@ -27,5 +27,14 @@
   * @return {number}
   */
  var arrangeCoins = function (n) {
-    
+    let current = 0
+    let remaining = n
+
+    while(remaining > current) {
+        if()
+        current += 1
+        remaining -= current
+    }
+
+    return current
  };
