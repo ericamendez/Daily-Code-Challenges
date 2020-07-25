@@ -31,7 +31,6 @@
     let remaining = n
 
     while(remaining > current) {
-        if()
         current += 1
         remaining -= current
     }
