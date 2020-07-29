@@ -38,10 +38,8 @@
             count += 1
             newBallHeight *= bounce 
         }
-        console.log(count)
         return count
      } else {
-         console.log(count)
          return -1
      }
  }
