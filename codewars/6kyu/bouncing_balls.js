@@ -31,8 +31,19 @@
 
  function bouncingBall(h, bounce, window) {
      if(h > 0 && bounce > 0 && bounce < 1 && window < h) {
+        let newBallHeight = h
+        let count = 1
 
+        while( newBallHeight >= window) {
+            count += 1
+            newBallHeight *= bounce 
+        }
+        console.log(count)
+        return count
      } else {
-         
+         console.log(count)
+         return -1
      }
  }
+
+ bouncingBall(3, 0.66, 1.5)
