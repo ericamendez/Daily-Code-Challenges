@@ -97,14 +97,55 @@
 
     let occurances = [...uniqueValues.values()]
 
-    // const biggerByOne = occurances[0] - occurances[1] === 1 || occurances[1] - occurances[0] === 1 
-    if (occurances === 1) {
+    console.log(uniqueValues)
+
+    console.log(occurances.includes(1))
+
+    let uniqueCharDupCount = [...uniqueValues.keys()]
+    const biggerByOne = uniqueCharDupCount[0] - uniqueCharDupCount[1] === 1 || uniqueCharDupCount[1] - uniqueCharDupCount[0] === 1
+    if (occurances.length === 1) {
         return "YES"
-    } else if (occurances.length == 2 && occurances.includes(1) ) {
+    } else if (occurances.length == 2 && occurances.includes(1) && biggerByOne ) {
         return "YES"
     } else {
         return "NO"
     }
  }
 
- isValid("aabbccddeefghi")
+ 
+
+
+
+
+ /**
+  * 
+  * OTHER SOLUTION IN PYTHON
+  * 
+  * #Enter your code here.Read input from STDIN.Print output to STDOUT# Enter your code here.Read input from STDIN.Print output to STDOUT
+  test_string = raw_input()
+  char_dict = {}
+  for char in test_string:
+      char_dict.setdefault(char, 0)
+  char_dict[char] = char_dict[char] + 1
+
+  freq1 = None
+  freq2 = None
+  printed = False
+  for char in char_dict.keys():
+      val = char_dict.pop(char)
+  list1 = [val]
+  list1.extend(char_dict.values())
+  list2 = [val - 1]
+  if (val - 1 > 0)
+  else []
+  list2.extend(char_dict.values())
+
+  if (min(list1) == max(list1)) or(min(list2) == max(list2)):
+      print 'YES'
+  printed = True
+  break
+  char_dict[char] = val
+
+  if not printed:
+      print 'NO'
+  */
