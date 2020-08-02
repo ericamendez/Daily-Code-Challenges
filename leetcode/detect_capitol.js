@@ -29,7 +29,7 @@
  */
 var detectCapitalUse = function (word) {
     const wordSplit = word.split('')
-    const firstCharUpper = [wordSplit[0].toUpperCase(), ...wordSplit.slice(1, wordSplit.length).join('').toLowerCase()].join('')
+    const firstCharUpper = wordSplit[0].toUpperCase() + wordSplit.slice(1, wordSplit.length).join('').toLowerCase()
 
     return word.length === 1 || word === word.toUpperCase() || word === word.toLowerCase() || word === firstCharUpper
 };
