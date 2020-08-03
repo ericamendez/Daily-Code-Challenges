@@ -36,11 +36,20 @@
     const numerator = Number(splitFraction[0])
     const denominator = Number(splitFraction[1])
 
-    if (numerator % denominator === 0) {
+    if (denominator === 0) {
+        throw new Error("Attempted division by zero!")
+    } else if (numerator === 0) { 
+        return "0"
+    } else if (numerator < denominator) {
+        console.log(s)
+        return s
+    } else if (numerator % denominator === 0) {
+        console.log(`${Math.floor(numerator/denominator)}`);
         return `${Math.floor(numerator/denominator)}`
     } else {
+        console.log(`${Math.floor(numerator/denominator)} ${numerator % denominator}/${denominator}`)
         return `${Math.floor(numerator/denominator)} ${numerator % denominator}/${denominator}`
     }
  }
 
- mixedFraction('4/3')
+ mixedFraction('2/3')
