@@ -32,24 +32,37 @@
  */
 
  function mixedFraction(s) {
+    if(s[0] === "-") {
+        
+    }
     const splitFraction = s.split('/')
     const numerator = Number(splitFraction[0])
     const denominator = Number(splitFraction[1])
+
+    const reduce = (numerator, denominator) => {
+        var gcd = function gcd(a, b) {
+            return b ? gcd(b, a % b) : a;
+        };
+        gcd = gcd(numerator, denominator);
+        return [numerator / gcd, denominator / gcd];
+    }
 
     if (denominator === 0) {
         throw new Error("Attempted division by zero!")
     } else if (numerator === 0) { 
         return "0"
     } else if (numerator < denominator) {
-        console.log(s)
-        return s
+        let simplified = reduce(numerator, denominator)
+        //console.log(`${simplified[0]}/${simplified[1]}`);
+        return `${simplified[0]}/${simplified[1]}`
     } else if (numerator % denominator === 0) {
-        console.log(`${Math.floor(numerator/denominator)}`);
+        //console.log(`${Math.floor(numerator/denominator)}`);
         return `${Math.floor(numerator/denominator)}`
     } else {
-        console.log(`${Math.floor(numerator/denominator)} ${numerator % denominator}/${denominator}`)
-        return `${Math.floor(numerator/denominator)} ${numerator % denominator}/${denominator}`
+        let simplified = reduce(numerator % denominator, denominator)
+        //console.log(`${Math.floor(numerator/denominator)} ${simplified[0]}/${simplified[1]}`);
+        return `${Math.floor(numerator/denominator)} ${simplified[0]}/${simplified[1]}`
     }
  }
 
- mixedFraction('2/3')
+ mixedFraction('22/7')
