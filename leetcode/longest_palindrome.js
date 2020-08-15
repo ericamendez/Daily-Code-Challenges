@@ -27,15 +27,29 @@
   */
 var longestPalindrome = function (s) {
     let count = 0
-    let sArr = s.split('')
     let obj = {}
 
-    sArr.forEach(char => {
-        obj.hasOwnProperty(obj[char]) ? 
-    })
+    for(let i = 0; i < s.length; i++) {
+        obj[s[i]] = (obj[s[i]] + 1) || 1
+    }
 
+    for (char in obj) {
+        if (obj[char] > 1) {
+            count += Math.floor(obj[char] / 2)
+        }
+    }
 
-    console.log(sArr)
+    if (s.length < 2) {
+        return s.length
+    } else if (s.length % 2 === 0) {
+        if(count === s.length) {
+            return count
+        } else {
+            return count + 1
+        }
+    } else {
+        return count + 1
+    }
 };
 
-longestPalindrome('eeric')
+console.log(longestPalindrome('eericcca'))
