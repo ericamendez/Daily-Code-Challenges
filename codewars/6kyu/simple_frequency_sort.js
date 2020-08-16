@@ -16,7 +16,14 @@ function solve(arr) {
         obj[num] = (obj[num] + 1) || 1
     })
 
-    Object.entries(obj).sort((a, b) => b[1] - a[1]).forEach(pair => {
+    let sortedPairs = Object.entries(obj).sort((a, b) => {
+        if (b[1] === a[1]){
+            return a[0] - b[0]
+        }
+        return b[1] - a[1]
+    })
+    
+    sortedPairs.forEach(pair => {
         for(let i = 0; i < pair[1]; i++) {
             answer.push(Number(pair[0]))
         }
@@ -26,3 +33,14 @@ function solve(arr) {
 }
 
 solve([2, 3, 5, 3, 7, 9, 5, 3, 7])
+
+
+/**
+ * OTHER SOLUTION THAT IS MORE CONDENSED AND USES SOME SHORT CIRCUIT EVALUATIONS TO SOLVE
+ * 
+ * function solve(arr) {
+     var r = {}
+     for (var n of arr) r[n] = r[n] + 1 || 1
+     return arr.slice().sort((a, b) => r[b] - r[a] || a - b)
+ }
+ */
