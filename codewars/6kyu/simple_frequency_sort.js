@@ -40,6 +40,8 @@ solve([2, 3, 5, 3, 7, 9, 5, 3, 7])
  * 1) They made an object with key of each number in the array and value of how many times the number appears, similar to my solution.
  * 2) Instead of pushing to a new array like I did, they sorted a copy of the arr argument. 
  *      - if the frequency of the second element is smaller then the first, it will be truthy, if not compare the values 
+ *      - elements will be sorted in descending frequency
+ *      - if the same frequency, then elements will be sorted in ascending value
  */
 
 //  function solve(arr) {
