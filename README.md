@@ -14,5 +14,8 @@ LeetCode is the best platform to help you enhance your skills, expand your knowl
 ## MISC Challenges
 Miscellaneous challenges 
 
+## Project Euler
+Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. 
+
 ## Rosalind
 Rosalind is a platform for learning bioinformatics and programming through problem solving
