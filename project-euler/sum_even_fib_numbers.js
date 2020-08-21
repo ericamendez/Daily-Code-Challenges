@@ -9,14 +9,11 @@
  */
 
  let evenFibNumberSum = (num) => {
-    let arr = Array.from(Array(num + 1), (_, i) => i + 1)
+    let arr = Array.from(Array(num), (_, i) => i + 1)
 
-    return arr.reduce((acc, el, i) => {
-        if( i > 0) {
-            let fibCurrent = el + arr[i - 1]
-            if (fibCurrent % 2 === 0) {
-                return acc + fibCurrent
-            }
-        }
-    }, 0)
+    let fib = arr.map((el, i) => i > 0 ? el + arr[i-1] : 1)
+
+    return fib.reduce((acc, el) => acc + el, 0)
  }
+
+ console.log(evenFibNumberSum(10))
