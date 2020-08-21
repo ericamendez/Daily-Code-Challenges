@@ -8,6 +8,15 @@
      By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even - valued terms.
  */
 
- let evenFibNumberSum = () {
-     
+ let evenFibNumberSum = (num) => {
+    let arr = Array.from(Array(num + 1), (_, i) => i + 1)
+
+    return arr.reduce((acc, el, i) => {
+        if( i > 0) {
+            let fibCurrent = el + arr[i - 1]
+            if (fibCurrent % 2 === 0) {
+                return acc + fibCurrent
+            }
+        }
+    }, 0)
  }
