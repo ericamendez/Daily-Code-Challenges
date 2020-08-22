@@ -32,10 +32,17 @@
  */
 
 function longestSlideDown(pyramid) {
-    let longestPath = []
-    for (let i = 0; i < pyramid.length-1; i++) {
-
+    let longestPath = [pyramid[0][0]]
+    let currentStepIndex = 0
+    for (let i = 1; i < pyramid.length; i++) {
+        if (pyramid[i][currentStepIndex] > pyramid[i][currentStepIndex + 1]) {
+            longestPath.push(pyramid[i][currentStepIndex])
+        } else {
+            longestPath.push(pyramid[i][currentStepIndex + 1])
+        }
     }
+
+    return longestPath
 }
 
 console.log(longestSlideDown([
