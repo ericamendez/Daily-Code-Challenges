@@ -35,5 +35,18 @@
  */
 
 function towerBuilder(nFloors) {
-    
+    let tower = []
+
+    for(let i = 0; i < nFloors; i++) {
+        let num = i + 1
+        if (i < 1) {
+            tower.push(`${' '.repeat(nFloors - num)}${'*'.repeat(1)}${' '.repeat(nFloors - num)}`)
+        } else {
+            tower.push(`${' '.repeat(nFloors - num)}${'*'.repeat(i + num)}${' '.repeat(nFloors - num)}`)
+        }
+    }
+
+    return tower
 }
+
+console.log(towerBuilder(6));
