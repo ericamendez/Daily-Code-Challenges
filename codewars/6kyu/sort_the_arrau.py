@@ -8,4 +8,14 @@ Example
 '''
 
 def sort_array(source_array):
+    # for each, if odd, push el[source_array - i]
+    # if even push to answer array
+    answer = []
+
+    for i in source_array:
+        if (source_array % 2 != 0):
+            answer.append(source_array[len(source_array) - i])
+        else:
+            answer.append(source_array[1])
     
+    return answer
