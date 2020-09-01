@@ -13,7 +13,6 @@ Patrick Feeney => P.F
 */
 
 function abbrevName(name){
-  name.toUpperCase
-  let arr = name.split(" ")
+  let arr = name.toUpperCase.split(" ")
   return `${arr[0][0].toUpperCase()}.${arr[1][0].toUpperCase()}`
 }

@@ -5,18 +5,15 @@
 // The function should return result of numbers after applying the chosen operation.
 
 function basicOp(operation, value1, value2){
-  if(operation == "+"){
-    let prod = Number(value1) + Number(value2)
-    return prod
-  }else if(operation == "-"){
-    let prod = Number(value1) - Number(value2)
-    return prod
-  }else if(operation == "*"){
-    let prod = Number(value1) * Number(value2)
-    return prod
-  }else if(operation == "/"){
-    let prod = Number(value1) / Number(value2)
-    return prod
+  switch(operation){
+    case '+':
+      return Number(value1) + Number(value2)
+    case '-':
+      return Number(value1) - Number(value2)
+    case '*':
+      return Number(value1) * Number(value2)
+    case '/':
+      return Number(value1) / Number(value2)
   }
 }
 
