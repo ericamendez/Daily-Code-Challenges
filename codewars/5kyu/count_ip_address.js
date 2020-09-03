@@ -19,7 +19,16 @@ function ipsBetween(start, end) {
     for(let i = 0; i < 4; i++){
         let total = Number(endArr[i]) - Number(startArr[i])
         ipCount.push(total)
+
+        switch(i) {
+            case 0:
+                
+            case 1:
+            case 2:
+            case 3:
+        }
     }
+
 
 
     console.log(ipDiff)
