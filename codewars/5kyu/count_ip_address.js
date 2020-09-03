@@ -14,14 +14,17 @@ function ipsBetween(start, end) {
     let startArr = start.split('.')
     let endArr = end.split('.')
 
+    let ipDiff = []
+
     for(let i = 0; i < 4; i++){
-        startArr[i] - endArr[i]
+        let total = Number(endArr[i]) - Number(startArr[i])
+        ipCount.push(total)
     }
 
 
-    console.log()
+    console.log(ipDiff)
 }
 
-ipsBetween("10.0.0.0", "10.1.0.50")
+ipsBetween("10.0.0.0", "10.0.0.50")
 
 // [1023-768] [767-512] [511-256] [255]
