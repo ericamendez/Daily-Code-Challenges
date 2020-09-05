@@ -19,17 +19,23 @@ function ipsBetween(start, end) {
     for(let i = 0; i < 4; i++){
         let total = Number(endArr[i]) - Number(startArr[i])
 
+        // each ase being logged twice, figure that out to finish problem
         switch(i) {
             case 0:
-                count += (total || total + 767)
+                console.log(total || total + 767);
+                count += total || total + 767
             case 1:
-                count += (total || total + 511)
+                console.log(total || total + 511);
+                count += total || total + 511
             case 2:
-                count += (total || total + 255)
+                console.log(total || total + 255);
+                count += total || total + 255
             case 3:
-                count += (total || total)
+                console.log(total);
+                count += total
         }
     }
+    console.log(count);
 
     return count
 }
