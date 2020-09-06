@@ -6,11 +6,7 @@ In this simple assignment you are given a number and have to make it negative. B
 
 function makeNegative(num) {
   let x = Number(num)
-  if(x > 0){
-    return 0 - x
-  }else{
-  return x
-  }
+  return x > 0 ? 0 - x : x
 }
 
 /*
