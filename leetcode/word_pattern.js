@@ -35,5 +35,7 @@
  * @return {boolean}
  */
 var wordPattern = function (pattern, str) {
+  let patternArr = pattern.split('')
 
+  
 };
