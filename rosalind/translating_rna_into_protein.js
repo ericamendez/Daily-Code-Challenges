@@ -81,3 +81,21 @@ const translationObj = {
   "AGG": "R",
   "GGG": "G"
 }
+
+let rnaToProtein = (str) => {
+  let protein = ""
+
+  let codons = str.match(/.{1,3}/g)
+  
+  for(let i = 0; i<= codons.length; i++) {
+    if (translationObj[codons[i]] != "Stop") {
+      protein += translationObj[codons[i]]
+    } else {
+      break
+    }
+  };
+
+  return protein
+}
+
+console.log(rnaToProtein('AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA'))
