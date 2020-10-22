@@ -11,9 +11,12 @@
 function chunk(array, size) {
   let answer = []
 
+  // I want to loop by how many subarrays I want to create
   for (let i = 0; i < array.length / size; i++) {
+    // where I want to start slicing from in the array, which starts at 0 and then every multiple of "size"
     let sliceStart = i * size
 
+    // Slice from sliceStart to slicestart + the size of the wanted subarray
     answer.push([...array.slice(sliceStart, sliceStart + size)])
   }
 
