@@ -44,6 +44,8 @@ function prefill(n, v) {
     return undefined
   } else {
     return Array(n).fill(v)
+
+    // could also do... Array.from({ length: n }, () => v)
   }
 }
 
