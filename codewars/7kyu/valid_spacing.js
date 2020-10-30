@@ -17,3 +17,8 @@
    ' ' = false '' = true
  */
 
+function validSpacing(s) {
+  return /^[A-Z]([A-Z]|\d| (?! ))*$/i.test(s) && /\s/.test(s)
+}
+
+console.log(validSpacing('Hello world'))
