@@ -21,5 +21,27 @@
  */
 
 function killer(suspectInfo, dead) {
-  //your code here...
+  let killer = null;
+
+  for (const suspect in suspectInfo) {
+    let seen = [];
+    dead.forEach(name => {
+      suspectInfo[suspect].includes(name) ? seen.push(name) : null;
+      
+    });
+
+    if (seen.length === dead.length) {
+      return suspect
+    }
+  }
 }
+
+let suspectObj = {
+  'James': ['Jacob', 'Bill', 'Lucas'],
+  'Johnny': ['David', 'Kyle', 'Lucas'],
+  'Peter': ['Lucy', 'Kyle']
+}
+
+let deadObj = ['Lucas', 'Bill']
+
+console.log(killer(suspectObj, deadObj));
