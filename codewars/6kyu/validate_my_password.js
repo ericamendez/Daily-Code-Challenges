@@ -14,8 +14,10 @@
 
 function validPass(password) {
   if(password.length >= 3 && password.length <=20) {
-
+    return /^[0-9a-zA-Z]+$/g.test(password) ? 'VALID' : null
   } else {
     return 'INVALID'
   }
 }
+
+console.log(validPass("erjh~d829"));
