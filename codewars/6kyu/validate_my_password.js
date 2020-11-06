@@ -13,5 +13,9 @@
  */
 
 function validPass(password) {
+  if(password.length >= 3 && password.length <=20) {
 
+  } else {
+    return 'INVALID'
+  }
 }
