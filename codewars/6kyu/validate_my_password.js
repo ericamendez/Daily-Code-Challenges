@@ -13,6 +13,10 @@
  */
 
 function validPass(password) {
+  // ( ? = ) is a positive lookahead.With this you can check if the included pattern exists within the string without making it part of the match.
+  // ( ? = . + [a - z]) tells you if there is at least one char from a - z
+  // ( ? = . + \d) tells you if there is at least one char from 0 - 9
+
   return /(?=.+[a-z])(?=.+\d)^[a-z\d]{3,20}$/i.test(password)
 }
 
