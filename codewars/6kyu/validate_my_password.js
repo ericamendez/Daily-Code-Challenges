@@ -13,11 +13,7 @@
  */
 
 function validPass(password) {
-  if(password.length >= 3 && password.length <=20) {
-    return /^[0-9][A-Za-z0-9 -]+$/g.test(password) ? 'VALID' : 'INVALID'
-  } else {
-    return 'INVALID'
-  }
+  return /(?=.+[a-z])(?=.+\d)^[a-z\d]{3,20}$/i.test(password)
 }
 
 console.log(validPass("erjh~d829"));
