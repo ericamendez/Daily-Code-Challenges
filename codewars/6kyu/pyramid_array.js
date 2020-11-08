@@ -20,5 +20,15 @@
 function pyramid(n) {
   let answer = []
 
-  
+  if (n === 0) {
+    return answer
+  } else {
+    let arr = []
+
+    for (let i = 0; i < n; i++) {
+      arr.push(1)
+    }
+  }
+
+  return answer
 }
