@@ -25,10 +25,14 @@ function pyramid(n) {
   } else {
     let arr = []
 
-    for (let i = 0; i < n; i++) {
-      arr.push(1)
+    for (let i = 1; i <= n; i++) {
+      arr.push(Array(i).fill(1))
     }
+
+    answer.push(arr)
   }
 
-  return answer
+  return [...answer]
 }
+
+console.log(pyramid(1));
