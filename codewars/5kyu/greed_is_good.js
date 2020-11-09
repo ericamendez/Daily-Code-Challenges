@@ -46,22 +46,11 @@ function score(dices) {
       case '1':
         countObj[roll] >= 3 ? points += 1000 + (countObj[roll] % 3 * 100) : points += countObj[roll] % 3 * 100;
         break
-      case '2':
-        countObj[roll] >= 3 ? points += 200 : null;
-        break
-      case '3':
-        countObj[roll] >= 3 ? points += 300 : null;
-        break
-      case '4':
-        countObj[roll] >= 3 ? points += 400 : null;
-        break
       case '5':
         countObj[roll] >= 3 ? points += 500 + (countObj[roll] % 3 * 50) : points += countObj[roll] % 3 * 50
         break
-      case '6':
-        countObj[roll] >= 3 ? points += 600 : null;
-        break
       default:
+        countObj[roll] >= 3 ? points += Number(roll) * 100 : null;
         break;
     }
   }
