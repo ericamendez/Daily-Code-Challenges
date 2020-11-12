@@ -11,6 +11,23 @@
  sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
  */
 
- function sortArray(array) {
-   // Return a sorted array.
- }
+function sortArray(array) {
+  let oddIndexArr = []
+  let oddArr = array.filter((num, i) => {
+    if (num % 2 != 0) {
+      oddIndexArr.push(i)
+      return num
+    }
+  }).sort()
+
+  oddIndexArr.sort()
+  let answer = [...array]
+
+  oddArr.forEach((num, i) => {
+    answer.splice(oddIndexArr[i], 1, num)
+  });
+  
+  return answer
+}
+
+console.log(sortArray([5, 3, 2, 8, 1, 4]));
