@@ -18,7 +18,9 @@
  */
 
 function validSpacing(s) {
-  return /^[A-Z]([A-Z]|\d| (?! ))*$/i.test(s) && /\s/.test(s)
+  return s.includes('  ') ? false
+    : s.includes(' ') ? /^[-a-zA-Z0-9-()]+(\s+[-a-zA-Z0-9-()]+)*$/i.test(s) 
+    : true
 }
 
 console.log(validSpacing('Hello world'))
