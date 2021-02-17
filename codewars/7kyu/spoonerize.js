@@ -17,8 +17,8 @@
 function spoonerize(words) {
   let arr = words.split(' ')
 
-  let first = [arr[0][0], ...arr[0].substring(1, arr[0].length)].join('')
-  let second = [arr[1][0], ...arr[1].substring(1, arr[1].length)].join('')
+  let first = [arr[1][0], ...arr[0].substring(1, arr[0].length)].join('')
+  let second = [arr[0][0], ...arr[1].substring(1, arr[1].length)].join('')
   
   return `${first} ${second}`
 }
