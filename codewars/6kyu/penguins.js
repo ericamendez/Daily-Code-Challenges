@@ -53,7 +53,7 @@
 
 function calculateWinners(snapshot, penguins) {
   let filteredRaceArr = snapshot.split('|').filter(el => {
-    if(el[0] === '-' ) {
+    if(el[0] === '-' || el[0] === '~') {
       return true
     }else {
       return false
@@ -80,14 +80,15 @@ function calculateWinners(snapshot, penguins) {
     return a[1] - b[1]
   })
 
+  console.log(filteredRaceArr)
   return `GOLD: ${sortedOutcome[0][0]}, SILVER: ${sortedOutcome[1][0]}, BRONZE: ${sortedOutcome[2][0]}`
 };
 
-const snapshot = `|----p---~---------|
-  |----p---~~--------|
-  |----P---~~~-------|
-  |----p-------------|`
+const snapshot = `|-~~------------~--p-------|
+    |~~--~p------------~-------|
+    |--------~-p---------------|
+    |--------~-p----~~~--------|`;
 
-const penguins = ["Derek", "Francis", "Bob", "Erica"];
+const penguins = ["Joline", "Abigail", "Jane", "Gerry"];
 
 console.log(calculateWinners(snapshot, penguins))
