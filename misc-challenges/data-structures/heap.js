@@ -19,6 +19,10 @@ class MinHeap {
     if(this.heap.length > 1) {
       let currentNodeIndex = this.heap.lenngth - 1
 
+      // traverse up the parent node until the current node (current) is greater than the parent (current/2)
+      while(){
+
+      }
       
     }
   }
