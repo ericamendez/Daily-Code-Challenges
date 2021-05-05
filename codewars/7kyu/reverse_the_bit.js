@@ -8,10 +8,10 @@
  */
 
 function reverseBits(n) {
-  let binary = n.toString(2)
-  let reverseBinaryInt = parseInt(binary.toString().split('').reverse().join(''))
+  let binaryStr = n.toString(2)
+  let reverse = binaryStr.split('').reverse().join('')
 
-  return parseInt(reverseBinaryInt, 2)
+  return parseInt(reverse, 2)
 }
 
-console.log(reverseBits(417))
+console.log(reverseBits(2017))
