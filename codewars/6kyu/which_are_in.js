@@ -19,11 +19,11 @@
  */
 
 function inArray(array1, array2) {
-  array1.forEach(sub => {
-    array2.forEach(string => {
+  return array1.filter(sub => {
+    return array2.some(string => {
       return string.includes(sub) ? true : false
     })
-  });
+  }).sort()
 }
 
-console.log(inArray(["arp", "live", "strong"], ["lively", "alive", "harp", "sharp", "armstrong"]))
+console.log(inArray(["arp", "live", "strong", "lasagna"], ["lively", "alive", "harp", "sharp", "armstrong"]))
