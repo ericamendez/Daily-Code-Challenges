@@ -27,3 +27,5 @@
 function hexStringToRGB(hexString) {
   
 }
+
+console.log(hexStringToRGB("#FF9933"))
