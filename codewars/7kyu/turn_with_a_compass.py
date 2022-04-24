@@ -24,3 +24,13 @@ def direction(facing, turn):
                 currentIndex = 0
 
     return direction[currentIndex]
+
+
+# Others Solution:
+# "S",  180  -->  "N"
+DIRECTIONS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+
+
+def direction(facing, turn):
+    return DIRECTIONS[(turn // 45 + DIRECTIONS.index(facing)) % 8]
+    # Directions[4 + 4 % 8] -> Directions [0]
