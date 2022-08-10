@@ -29,13 +29,12 @@ function unusedDigits(...args) {
     let completeNums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     let allNums = []
     
-    for(let num in arguments) {
-        let splitNum = arguments[num].toString().split('')
-        allNums = [...allNums, ...splitNum]
-    }
+    args.forEach( num => {
+        
+    })
 
     let answer = completeNums.filter(num => allNums.indexOf(num) < 0).join('')
-    return answer
+    return 
 }
 
 console.log(unusedDigits(12, 34, 56, 78))
