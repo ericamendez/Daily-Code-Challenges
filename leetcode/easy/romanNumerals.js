@@ -127,7 +127,7 @@ var romanToInt = function(s) {
     return sum
 };
 
-romanToInt(example)
+// romanToInt(example)
 
 /**
  * BETTER SOLUTION
@@ -158,6 +158,8 @@ var romanToInt2 = function(s) {
             sum += current
         }
     }
+    console.log(sum)
+    return sum
 }
 
 romanToInt2(example)
