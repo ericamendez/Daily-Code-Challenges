@@ -10,6 +10,10 @@
  * @return {ListNode}
  */
 
+
+/****************************************************************************
+ * BRUTE FORCED ATTEMPT
+ */
 const example = [1,1,2,3,3]
 
 var deleteDuplicates = function(head) {
@@ -17,13 +21,14 @@ var deleteDuplicates = function(head) {
     let linkedToArr = []
     let currentHead = head
 
+    // looping through the linked list to convert it into an array
     while(currentHead !== null){
         linkedToArr.push(currentHead.value)
         currentHead = currentHead.next
     }
 
     let filteredArr = [... new Set(linkedToArr)].sort()
-
+    // turn array into a linked list
     return filteredArr.reduceRight((next, value) => ({value, next}), null);
 
 }
@@ -33,13 +38,12 @@ var deleteDuplicates = function(head) {
  * { value: 3, next: { value: 1, next: { value: 2, next: [Object] } } }
  * 
  */
-l = [3, 1, 2, 3, 4, 5];
 
 function linkedList(arr){
     return arr.reduceRight((next, value) => ({value, next}), null);
 }
   
-  let exampleLinkedList = linkedList(l)
+  let exampleLinkedList = linkedList(example)
 //   console.log(exampleLinkedList);
 
 
@@ -47,24 +51,25 @@ function linkedList(arr){
  * TESTING THE FUNCTION
  */
 
-console.log(deleteDuplicates(exampleLinkedList))
+// console.log(deleteDuplicates(exampleLinkedList))
 
 
 
-
-
-
-
-/**
- * LOOPING THORUGH THE LINKED LIST
+/*******************************************************************************
+ * SECOND TRY
  */
+var deleteDuplicates2 = function(head) {
+    let current = head
 
-// let head = exampleLinkedList
-// let arrFromLinked = []
+    while(current && current.next){
+        if(current.val == current.next.val){
+            current.next = current.next.next
+        } else {
+            current = current.next
+        }
+    }
 
-// while(head !== null){
-//     arrFromLinked.push(head.value)
-//     head = head.next
-// }
+    return head
+}
 
-// console.log(arrFromLinked)
+console.log(deleteDuplicates2(exampleLinkedList))
