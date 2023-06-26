@@ -12,7 +12,7 @@
 
 
 /****************************************************************************
- * BRUTE FORCED ATTEMPT
+ * BRUTE FORCED ATTEMPT, but a good approach if the input linked list is not sorted
  */
 const example = [1,1,2,3,3]
 
@@ -62,6 +62,8 @@ var deleteDuplicates2 = function(head) {
     let current = head
 
     while(current && current.next){
+        // since the linked list is sorted, we can check if the current value is the same a the next value,
+        // if they ar ethe same replace current.next oject with current.next.next
         if(current.val == current.next.val){
             current.next = current.next.next
         } else {
