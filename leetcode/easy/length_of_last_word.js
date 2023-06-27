@@ -24,6 +24,10 @@ Output: 6
 Explanation: The last word is "joyboy" with length 6.
  */
 
+
+const example = "luffy is still joyboy"
+const example2 = "   fly me   to   the moon  "
+
 /**
  * @param {string} s
  * @return {number}
@@ -32,3 +36,5 @@ var lengthOfLastWord = function(s) {
     let arr = s.trim().split(' ')
     return arr[arr.length - 1].length
 };
+
+console.log(lengthOfLastWord(example2))
