@@ -37,7 +37,7 @@ var longestCommonPrefix = function(strs) {
             if (prefix === "") {
               return "";
             }
-          }
+        }
         //compares word to word
     })
     return prefix
