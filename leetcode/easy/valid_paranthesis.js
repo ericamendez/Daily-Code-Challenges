@@ -31,6 +31,7 @@ s consists of parentheses only '()[]{}'.
 
 const valid = '{[]}'
 const notValid = '([)]'
+const valid2= '()[]{}'
 
 /**
  * @param {string} s
@@ -62,7 +63,8 @@ var isValid = function(s) {
             count++
         }
     }
+    console.log(check)
     return answer
 };
 
-console.log(isValid(notValid))
+console.log(isValid(valid2))
