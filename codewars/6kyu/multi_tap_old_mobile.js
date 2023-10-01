@@ -98,11 +98,10 @@ let clicksPerKey = {
 
 function presses(phrase) {
     let count = 0
+    let upper = phrase.toUpperCase()
     for(let i = 0; i<phrase.length; i++){
-        Object.hasOwn(clicksPerKey, phrase[i]) ? count += clicksPerKey[phrase[i]] : ''
+        Object.hasOwn(clicksPerKey, upper[i]) ? count += clicksPerKey[upper[i]] : ''
     }
     
     return count
 }
-
-console.log(presses('LOL'))
