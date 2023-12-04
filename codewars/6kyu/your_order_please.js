@@ -7,14 +7,18 @@
  return an empty string.The words in the input String will only contain valid consecutive numbers.
  */
 
-function order(words) {
+ function order(words){
   let wordArr = words.split(' ')
   let answer = Array(wordArr.length)
 
+  if(words === "") {
+    return words
+  }
+  
   wordArr.forEach(word=> {
     answer[word.match(/\d+/)[0] -1] = word
   });
-
+  
   return answer.join(' ')
 }
 
