@@ -35,7 +35,7 @@ var twoSum = function(nums, target) {
         }
     }
 }
-console.log(twoSum([3,2,4], 6))
+//console.log(twoSum([3,2,4], 6))
 
 
 //look through each element, calulate what the target would have to be, compare, if founf return
@@ -50,6 +50,43 @@ console.log(twoSum([3,2,4], 6))
 //         }
 //     };
 // };
+
+
+//Input: nums = [3,2,4], target = 6
+// let map = {3: 0}
+// 6-3 = 3
+//return index
+
+function twoSum2(arr, target){
+    let map = {}
+
+    for(let i = 0; i < arr.length; i++){
+        const need = 6 - arr[i]
+        if(Object.keys(map).includes(need.toString())){
+            return [map[need], i]
+        }else {
+            map[arr[i]] = i
+        }
+    }
+    console.log(map)
+    return 'no solution'
+}
+
+console.log(twoSum2([3,2,4], 6))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
