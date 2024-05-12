@@ -27,7 +27,16 @@ It is guaranteed that the answer is unique.
 
 var topKFrequent = function(nums, k) {
     let map = {}
-    nums.forEach(num => )
+    let answer = []
+    nums.forEach(num => {
+        map[num] = map[num] + 1 || 1
+        if(map[num] == k){
+            answer.push(num)
+        }
+    })
+    console.log(map);
+    return answer
+    
 };
 
-topKFrequent([1,1,1,2,2,3], 2)
+console.log(topKFrequent([1,1,1,2,2,3], 2))
