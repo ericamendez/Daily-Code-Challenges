@@ -37,34 +37,68 @@ const valid2= '()[]{}'
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-    const open = ['[', '{', '(']
+// var isValid = function(s) {
+//     const open = ['[', '{', '(']
     
-    let count = 0
-    let check = ''
-    let answer = true
+//     let count = 0
+//     let check = ''
+//     let answer = true
 
-    for(let i = 0; i < s.length; i++){
-        if(!open.includes(s[i])){
-            if(s.substring(i, i+count) === check){
-                i = i+count-1
-                count = 0
-            }else {
-                answer = false
+//     for(let i = 0; i < s.length; i++){
+//         if(!open.includes(s[i])){
+//             if(s.substring(i, i+count) === check){
+//                 i = i+count-1
+//                 count = 0
+//             }else {
+//                 answer = false
+//             }
+//         } else {
+//             if(s[i] === '['){
+//                 check = ']'+check
+//             } else if(s[i] === '{'){
+//                 check = '}'+check
+//             }else {
+//                 check = ')'+check
+//             }
+//             count++
+//         }
+//     }
+//     console.log(check)
+//     return answer
+// };
+
+
+
+
+
+//SECOND ATTEMPT 2024
+
+/**
+ * @param {string} s
+ * @return {boolean}
+*/
+var isValid = function(s) {
+    console.log('hi');
+    const map = {
+        ')': '(', 
+        ']': '[', 
+        '}': '{'
+    }
+    let stack = []
+
+    for(let i = 0; i < s.length;i++){
+        console.log(stack);
+        if(Object.values(map).includes(s[i])){
+            stack.push(s[i])
+        } else if (map.hasOwnProperty(s[i])){
+            let value = stack.pop()
+            if(map[s[i]] !== value){
+                return false
             }
-        } else {
-            if(s[i] === '['){
-                check = ']'+check
-            } else if(s[i] === '{'){
-                check = '}'+check
-            }else {
-                check = ')'+check
-            }
-            count++
         }
     }
-    console.log(check)
-    return answer
+    return true
 };
 
-console.log(isValid(valid2))
+
+console.log(isValid(notValid))
