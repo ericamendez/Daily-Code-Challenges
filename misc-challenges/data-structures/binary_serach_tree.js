@@ -20,6 +20,30 @@ class Node {
             }
         }
     }
+
+    printInorder() {
+        if(this.left){
+            this.left.printInorder()
+        }
+        console.log(this.value)
+        if(this.right){
+            this.right.printInorder()
+        }
+    }
+
+    contains(needle) {
+        if(this.value === needle){
+            return true
+        }
+
+        if(this.left && needle < this.value){ // if theres is a left child and our needle is smaller than left child, GO LEFT
+            return this.left.contains(needle)
+        } else if ( this.right && needle > this.value){
+            return this.right.contains(needle)
+        }
+
+        return false
+    }
 }
 
 class BinarySearchTree {
@@ -37,10 +61,84 @@ class BinarySearchTree {
     }
 
     printInorder() {
-
+        if (this.root) {
+            this.root.printInorder()
+        }
     }
 
-    contains() {
-
+    contains(needle) {
+        if (this.root) {
+            return this.root.contains(needle)
+        }
+        return false
     }
 }
+
+
+const testBST = new BinarySearchTree()
+testBST.insert(10)
+testBST.insert(5)
+testBST.insert(3)
+testBST.insert(8)
+testBST.insert(15)
+testBST.insert(7)
+testBST.insert(11)
+
+// console.log(testBST)
+console.log(testBST.root.left)
+testBST.printInorder()
+console.log(testBST.contains(8))
+console.log(testBST.contains(25))
+
+
+
+
+
+
+
+
+// const bst = {
+//     value: 10,
+//     left: {
+//         value: 5,
+//         left: {
+//             value: 3,
+//             left: {
+
+//             },
+//             right: {
+                
+//             }
+//         },
+//         right: {
+//             value: 8,
+//             left: {
+
+//             },
+//             right: {
+                
+//             }
+//         }
+//     },
+//     right: {
+//         value: 15,
+//         left: {
+//             value: 11,
+//             left: {
+//                 value: null,
+//                 left: null,
+//                 right: null
+//             },
+//             right: {
+//                 value: null,
+//                 left: null,
+//                 right: null
+//             }
+//         },
+//         right: {
+//             value: null,
+//             left: null,
+//             right: null
+//         }
+//     }
+// }
