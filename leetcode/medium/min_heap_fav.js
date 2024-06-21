@@ -12,7 +12,7 @@ class Minheap {
 
     removeMin(){
         if(this.size = 0){
-            throw new Errror('Empty Head')
+            throw new Error('Empty Head')
         }
 
         let min = this.data[0]
@@ -80,3 +80,34 @@ class Minheap {
         this.data[index2] = temp
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
