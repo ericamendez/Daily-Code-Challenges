@@ -10,11 +10,13 @@ function diamond(n){
     let middle = Math.ceil(5/2)
     let answer = ''
 
-    for(let i = 0; i < n; i++){
+    for(let i = 1; i < n; i+=2){
+        console.log(i);
         if(i === 0){
-            answer += '*'
+            console.log(initial);
+            answer += '*|'
         } else if (i > 0 && i <= middle){
-
+            answer += '*'.repeat(i + i + 1)+ '|'
         } else {
             
         }
@@ -22,5 +24,6 @@ function diamond(n){
     return answer;
 }
 
-console.log(" *\n***\n *\n");
+// console.log(" *\n***\n *\n");
 console.log(diamond(5));
+
