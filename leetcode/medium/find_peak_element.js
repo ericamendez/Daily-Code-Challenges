@@ -40,12 +40,13 @@ var findPeakElement = function (nums) {
     for (let i = 0; i <= middleIndex; i++) {
         if (nums[i] > nums[biggerIndex]) {
             biggerIndex = i
-        } else if (nums[nums.length - 1 - i] > nums[biggerIndex]) {
+        }
+        if (nums[nums.length - 1 - i] > nums[biggerIndex]) {
             biggerIndex = nums.length - 1 - i
         }
     }
     return biggerIndex
 };
 
-let arr = [1, 2, 1, 3, 5, 6, 4]
+let arr = [1, 2, 3, 4, 5, 2, 1]
 console.log(findPeakElement(arr));
