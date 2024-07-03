@@ -50,3 +50,17 @@ var findPeakElement = function (nums) {
 
 let arr = [1, 2, 3, 4, 5, 2, 1]
 console.log(findPeakElement(arr));
+
+//FASTER SOLUTION
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findPeakElement = function (nums) {
+    if (nums.length < 2) return 0
+    for (let i = 0; i + 1 < nums.length; i++) {
+        if (nums[i + 1] < nums[i]) return i;
+    }
+    return nums.length - 1
+};
