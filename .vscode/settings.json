@@ -1,4 +1,9 @@
 {
     "github.copilot.editor.enableCodeActions": true,
-    "github.copilot.editor.enableAutoCompletions": false
+    "github.copilot.editor.enableAutoCompletions": false,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#19330E",
+        "titleBar.activeBackground": "#234813",
+        "titleBar.activeForeground": "#F6FCF3"
+    }
 }
