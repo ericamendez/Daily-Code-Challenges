@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .outer{
+    background-color: rgb(198, 195, 195);
+    margin: 5%;
+    border-radius: 15px;
+    padding: 15px;
+  }
+  
+  .inner{
+    background-color: black;
+    color:white;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 7em;
+  }

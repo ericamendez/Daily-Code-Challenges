@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import './style.css'
 
 const PAGE_SIZE = 6
 
-function App() {
+function HackerNews() {
   const [jobs, setJobs] = useState([])
   const [jobIDs, setJobIDs] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -23,7 +23,7 @@ function App() {
   
   const fetchJobDetails = async () => {
     const start = (pageBatch - 1) * PAGE_SIZE
-    const end = start + PAGE_SIZE - 1
+    const end = start + PAGE_SIZE
     
     try{
       const allJobDetails = await Promise.all(
@@ -90,4 +90,4 @@ function App() {
   )
 }
 
-export default App
+export default HackerNews
