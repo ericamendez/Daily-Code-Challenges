@@ -31,4 +31,20 @@ function howMuchILoveYou(nbPetals) {
             return 'not at all'
       }
   }
-  
+
+
+/** ANOTHER WAY */
+
+const phrases = [
+    'I love you',
+    'a little',
+    'a lot',
+    'passionately',
+    'madly',
+    'not at all',
+]
+
+function howMuchILoveYou2(nbPetals) {
+    let index = nbPetals % 6 === 0 ? 6 : nbPetals-1 % phrases.length
+    return phrases[index]
+}
