@@ -34,7 +34,20 @@ If you are given an array with multiple answers, return th
 function findEvenIndex(arr){
   if (arr.length === 0) return -1
   
-  arr.reduce(acc, cur => acc + cur,0)
+  const total = arr.reduce((acc, cur) => acc + cur,0)
+  let leftSum = 0
+  let answer = -1
+
+  for(let i = 0; i < arr.length; i++){
+      const rightSum = total - leftSum - arr[i]
+      if(leftSum === rightSum){
+        answer = i
+        break;
+      }
+      leftSum += arr[i]
+    }
+
+  return answer
 }
 
 const sample = [1,2,3,4,3,2,1]
